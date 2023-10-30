@@ -18,8 +18,7 @@ int main()
     unsigned long int input;
     int separatedInput[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
     // This is predefined so that numbers with less digits can be used in the function readArray
-    int is_empty[3] = {0, 0, 0}; // This is used to check if a row of the 2d array is a set of all 0s
-
+    
     // Getting the number to convert
     printf("Enter a number to convert: ");
     scanf("%d", &input);
@@ -39,7 +38,6 @@ int main()
     {
         if (separatedInput[i][0] == 0 && separatedInput[i][1] == 0 && separatedInput[i][2] == 0)
         {
-            is_empty[i] = 1; // This is a testing condition and is redundant
             continue;
         }
         else
@@ -90,6 +88,7 @@ int main()
     }
     printf("The number you entered, %d is written as:\n%s", input, writtenNumber);
 }
+
 // Power function the finds the power of a number as an integer rather than built in function that returns a double
 int power(int base, int power)
 {
